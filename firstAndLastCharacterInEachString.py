@@ -11,10 +11,6 @@ def FirstAndLast(string):
             print(string[i], end="")
 
 
-
-
-
-
 if __name__ == "__main__":
     string = "Geeks for Geeks"
     FirstAndLast(string)

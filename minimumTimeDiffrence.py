@@ -10,10 +10,12 @@ def findMinDifference(timePoints):
         timeList.append(minutes)
 
     timeList.sort()
+    print(timeList)
     diff = float('inf')
     for i in range(len(timeList) - 1):
         diff = min(diff, timeList[i + 1] - timeList[i])
-    diff = min(diff, 1440 - timeList[(len(timeList) - 1)] + timeList[0])
+    # add a day to 1st element and substract  and compare to the last
+
 
     return diff
 
@@ -21,4 +23,4 @@ def findMinDifference(timePoints):
 
 if __name__ == '__main__':
 
-    print (findMinDifference(["23:59", "00:00"]))
+    print (findMinDifference(["23:59", "00:01", "02:00"]))
