@@ -48,5 +48,5 @@ def printFrequency(strr):
 strr = "Geeks For Geeks"
 printFrequency(strr)
 
-# This code is contributed by shubhamsingh10
+
 
