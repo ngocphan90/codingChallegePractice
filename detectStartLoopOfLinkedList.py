@@ -33,8 +33,6 @@ def detectCycle(A):
 
     ptr = ptr.next
 
-
     return None
 
 # This code is contributed by pratham76
-
