@@ -20,5 +20,5 @@ def printDuplicates(arr):
 
 # Driver Code
 if __name__ == "__main__":
-    list = [12, 11, 40, 12, 5, 6, 5, 12, 11]
+    list = [12, 12, 12, 11]
     print(printDuplicates(list))
