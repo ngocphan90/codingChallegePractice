@@ -35,4 +35,4 @@ def detectCycle(A):
 
     return None
 
-# This code is contributed by pratham76
+
