@@ -16,7 +16,7 @@ import string
 
 def a(c):
     cnt = collections.defaultdict(dict)
-    arr = ["abc", "bcd"]
+    arr = ["abef", "bcd", "bde", "cadf"]
 
     for word in arr:
         for i, c in enumerate(word):
@@ -25,12 +25,13 @@ def a(c):
             adj2 = word[(i + 1) % len(word)]
             cnt[c][adj2] = cnt[c].get(adj2, 0) + 1
 
+            adj3 = word[(i + 2) % len(word)]
+            cnt[c][adj3] = cnt[c].get(adj3, 0) + 1
+
     for c in string.ascii_letters:
         if cnt[c]:
             mx = max(cnt[c].values())
-
-            print(c, ": ", [key for key, v in cnt[c].items() if v == mx])
-
+            print("adjacent characters with most count for", c, [k for k, v in cnt[c].items() if v == mx])
 
 
 
