@@ -7,8 +7,12 @@
 *	 def __init__(self, x):
 *		 self.val=x
 *		 self.next=None
-* '''
+def newNode(key):
 
+    temp = Node(key)
+    return temp
+
+*'''
 
 def detectCycle(A):
     # Declaring map to store node
@@ -31,7 +35,7 @@ def detectCycle(A):
         else:
             uset.add(ptr)
 
-    ptr = ptr.next
+        ptr = ptr.next
 
     return None
 

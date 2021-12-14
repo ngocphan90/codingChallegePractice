@@ -1,27 +1,54 @@
-# check if 2 strings are anagram
-#anagram if have the same character but order can be different
+# Number of n digit stepping numbers
+# naive approach is to run a loop for n digit number and check for every number if it is stepping
+# In dp[i][j], i denotes number of digits and denotes last digit
+# if there is only 1 digit: if i==1 dp(i,j) = 1
+# if last digit is 0: id i == 0 dp(i,j) = dp(i-1, j+1)
+# if last digit is 9 else if j == 9  dp(i,j) =dp(i-1, j-1)
+# if not 0 nor 9 else:  dp(i,j) = dp(i-1, j-1) + dp (i-1, j+1)
+# result is sum dp (n,j) where j varies from 1 to 9
 
-def areAnagram(str1, str2):
-    if len(str1) != len(str2):
-        return False
-    st1= sorted(str1)
-    st2 = sorted(str2)
+# Python3 program to calculate
+# the number of n digit
+# stepping numbers.
 
-    for i in range(0, len(st1)):
-        if st1[i] != st2[i]:
-            return False
-    return True
+# function that calculates
+# the answer
+def answer(n):
+    # dp[i][j] stores count of
+    # i digit stepping numbers
+    # ending with digit j.
+    dp = [[0 for x in range(10)]
+          for y in range(n + 1)];
 
+    # if n is 1 then answer
+    # will be 1.
+    if (n == 1):
+        return 10;
+    for j in range(10):
+        dp[1][j] = 1;
+        # Compute values for count
+        # of digits more than 1.
+    for i in range(2, n + 1):
+        for j in range(10):
 
+            # If ending digit is 0
+            if (j == 0):
+                dp[i][j] = dp[i - 1][j + 1];
 
+                # If ending digit is 9
+            elif (j == 9):
+                dp[i][j] = dp[i - 1][j - 1];
 
+                # For other digits.
+            else:
+                dp[i][j] = (dp[i - 1][j - 1] +
+                            dp[i - 1][j + 1]);
 
-# Driver code
-str1 = "cat"
-str2 = "act"
-# Function Call
-if areAnagram(str1, str2):
-    print("The two strings are anagram of each other")
-else:
-    print("The
- two strings are not anagram of each other")
+                # stores the final answer
+    sum = 0;
+    for j in range(1, 10):
+        sum = sum + dp[n][j];
+    return sum;
+# Driver Code
+n = 2;
+print(answer(n));
