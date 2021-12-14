@@ -1,24 +1,15 @@
-#Calculate the frequency of each word in the given string
+#removing duplicate characters from a string.
 
-
-def printFrequency(strr):
-
-    #define hashmap
-    hashMap ={}
-    #split the string
-    splitStr = strr.split()
-
-    #loop through the string
-    for i in range(0, len(splitStr)):
-        if splitStr[i] not in hashMap:
-            hashMap[splitStr[i]] = 1
-        else:
-            hashMap[splitStr[i]] += 1
-    for index in hashMap:
-        print(index, '_', hashMap[index])
+def removeDuplicate(strr):
+    newList = []
+    for index in strr :
+        if index not in newList:
+            newList.append(index)
+    a = ''.join(newList)
+    return a
 
 
 
-# Driver Code
-strr = "Geeks For Geeks"
-printFrequency(strr)
+# Driver code
+strr = "geeksforgeeks"
+print(removeDuplicate(strr))
