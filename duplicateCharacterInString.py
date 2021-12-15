@@ -15,14 +15,6 @@ def findDuplicate(strr):
             print(character, "-", strr_map[character])
 
 
-
-
-
-
-
-
-
-
 # Driver Code
 strr = "Geeks For Geeks"
 findDuplicate(strr)
