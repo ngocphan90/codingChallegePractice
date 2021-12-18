@@ -7,7 +7,7 @@ def tripletDifferentSum(numbers, sum):
     # 3rd approach use hash map(using extra space)
     sortedNumber = sorted(numbers)
     print(sortedNumber)
-    for i in range(0, len(numbers) - 2):
+    for i in range(0, len(numbers)):
         l = i + 1
         r = len(numbers) - 1
         while l < r:
