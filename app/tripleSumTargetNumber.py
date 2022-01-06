@@ -13,7 +13,7 @@ def tripletDifferentSum(numbers, sum):
         while l < r:
             if sortedNumber[i] + sortedNumber[l] + sortedNumber[r] == sum:
                 return '3 different number has total sum equal to target: ', \
-                       sortedNumber[i] , sortedNumber[l] , sortedNumber[r]
+                       sortedNumber[i], sortedNumber[l] , sortedNumber[r]
             elif sortedNumber[i] + sortedNumber[l] + sortedNumber[r] < sum:
                 l += 1
             else:
