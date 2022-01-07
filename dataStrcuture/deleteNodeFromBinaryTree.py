@@ -19,10 +19,10 @@ class Node:
 def inorder(root):
     if root is not None:
         inorder(root.left)
-        print(root.key),
+        print(root.key)
         inorder(root.right)
 #insert a new node with given key
-def insert(node,key)
+def insert(node,key):
     #if the tree is empty, return a new node
     if node is None:
         return Node(key)
@@ -71,7 +71,6 @@ def deleteNode (root,key):
         root.key = temp.key
         #delete inorder successor
         root.right = deleteNode(root.right, temp.key)
-
     return root
 
 # Driver code
@@ -87,8 +86,18 @@ root = insert(root, 30)
 root = insert(root, 20)
 root = insert(root, 40)
 root = insert(root, 70)
-root = insert(root, 60)
+#root = insert(root, 60)
 root = insert(root, 80)
+
+#print ("inorder traversal of the given tree")
+#inorder(root)
+print("\n delete 20")
+root = deleteNode(root,20)
+print("Inorder traversal of the modified tree")
+inorder(root)
+root = deleteNode(root, 70)
+print("Inorder traversal of the modified tree")
+inorder(root)
 
 
 
