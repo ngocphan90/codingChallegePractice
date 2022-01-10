@@ -16,6 +16,7 @@ def add_edge(node1, node2, weight):
             adj_list[node1] = temp
 
         elif node1 in adj_list:
+            # use extend to add the old node into the list
             temp.extend(adj_list[node1])
             temp.append([node2, weight])
             adj_list[node1] = temp
@@ -35,8 +36,8 @@ add_node(3)
 add_node(4)
 # Adding edges
 add_edge(0, 1, 2)
-add_edge(1, 2, 2)
-add_edge(2, 3, 4)
+#add_edge(1, 2, 2)
+#add_edge(2, 3, 4)
 add_edge(3, 0, 5)
 add_edge(3, 4, 3)
 add_edge(4, 0, 1)
