@@ -1,6 +1,6 @@
 
 def recursiveFactorial(number):
-    # if number is 1 or 0 ---return 1
+
     if number == 2:
         return number
     else:
