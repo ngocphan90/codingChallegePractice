@@ -5,7 +5,7 @@ def recursiveFactorial(number):
         # or if number < 2:
         return number
     else:
-        return number * recursiveFactorial(number-1)
+        return recursiveFactorial(number-1) + recursiveFactorial(number-2)
 
 
-print(recursiveFactorial(2))
+print(recursiveFactorial(8))
