@@ -1,8 +1,11 @@
 
 def recursiveFactorial(number):
-    if number < 2 or number == 2:
+    # if number is 1 or 0 ---return 1
+    if number == 1 or number == 0:
+        # or if number < 2:
         return number
-    return number * recursiveFactorial(number-1)
+    else:
+        return number * recursiveFactorial(number-1)
 
 
-print(recursiveFactorial(4))
+print(recursiveFactorial(2))
