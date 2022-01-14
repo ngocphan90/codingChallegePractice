@@ -20,3 +20,6 @@ def fibonacciRecurisve (n):
         return fibonacciRecurisve(n-1) + fibonacciRecurisve(n-2)
 # big O is O(2^n) : recursive function THAT SOLVES A PROBLEM OF SIZE N
 #print(fibonacciRecurisve(0))
+
+
+# Anything you do with a recursion can be done iteratively (LOOP)
