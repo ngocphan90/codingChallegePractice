@@ -3,16 +3,18 @@
 
  # def iterative(number):
 
-    # array = [0, 1]
-    # for i in range (0, n+1):
-        # array.push(array[i-2] + array[i-1])
-    # return arr[n]
-
-    #  return array[number]
-
+    # answer = 1
+    # if number == 2:
+        # answer = 2
+    # for i in range (2, n+1):
+        # answer = answer * i
 
 
-# Python program to find the factorial of a number using recursion
+    #  return answer
+
+
+
+# time coplexity: O(n)
 
 
 def iterative(number):
