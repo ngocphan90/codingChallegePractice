@@ -2,7 +2,7 @@
 #Take the second element and stored it as a key.
 # If first element > than key then key then key is
 # placed in front of first element
-# add more stuff  dgdfdf
+# add more stuff
 def insertionSort(arr):
 
     for i in range(1, len(arr)):
