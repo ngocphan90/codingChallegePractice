@@ -1,8 +1,7 @@
 #assume 1st card is sorted.
 #Take the second element and stored it as a key.
-# If first element > than key then key then key is
-# placed in front of first element
-# add more stuff
+#compare the key with each element on the left until an element smaller than it is found .
+
 def insertionSort(arr):
 
     for i in range(1, len(arr)):
