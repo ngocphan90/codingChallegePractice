@@ -14,3 +14,28 @@
     # if currentNode.right:
         # queue.append(currentNode.right)
 # return list
+
+
+# recurisive BFS
+
+# breadFirstSearch(queue, list)
+# if !queue.length:
+    # return list
+
+# currentNode = queue.pop(0)
+# list.append(currentNode.value)
+
+#   if currentNode.left:
+# queue.append(currentNode.left)
+#   if currentNode.right:
+# queue.append(currentNode.right)
+
+# return breadFirstSearch(queue, list)
+
+
+
+
+
+
+
+# function call breadFirstSearch(this.root, [])
