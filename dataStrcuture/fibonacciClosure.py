@@ -12,6 +12,6 @@ def fibonacciMaster(n, cache):
 
 print(fibonacciMaster(4, cache))
 
-
+# or using for loop <= nappend to list =[0,1] return answer.pop() # last item in the array
 
 
