@@ -2,17 +2,16 @@
 def lengthOfLongestSubstring(s) -> int:
     hashmap = {}
     longest, left, right = 0,0,0
-    for right in range(len(s)):
-        r= s[right]
-        if r not in hashmap:
-            hashmap[r] = right
-            prevSeenChar = hashmap[r]
-        else:
-            left = prevSeenChar + 1
-            right += 1
-        longest = max(longest, right - left +1)
+    for right, char in enumerate(s):
+        if char in hashmap:
+            sum = hashmap[char]
+            if sum > left:
+                left = sum + 1
 
+        longest = max(longest, right - left + 1)
+
+        hashmap[char] = right
     return longest
 
 
-print(lengthOfLongestSubstring("abcdacd"))
+print(lengthOfLongestSubstring("abcabd"))
